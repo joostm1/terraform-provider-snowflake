@@ -24,6 +24,8 @@ for changes required after enabling given [Snowflake BCR Bundle](https://docs.sn
 > [!TIP]
 > If you're still using the `Snowflake-Labs/snowflake` source, see [Upgrading from Snowflake-Labs Provider](./SNOWFLAKEDB_MIGRATION.md) to upgrade to the snowflakedb namespace.
 
+## v2.12.x ➞ v2.13.0
+
 ## v2.11.x ➞ v2.12.0
 
 ### *(new feature)* The new `strict_privilege_management` flag in the `snowflake_grant_privileges_to_account_role` resource
@@ -149,7 +151,7 @@ The internal implementation for authentication policy has now been updated to ha
 **Impact on the provider:**
 The built-in policy does not reside in a database and schema. As it can't be directly interacted with, we decided to treat this default transparently:
 - It won't be visible in the outputs for the `snowflake_authentication_policies` data source; if you query for authentication policies (with either `on.account` or `on.user` filtering options)
-  and only the built-in policy exists (no user-defined policies), the data source will return empty `show_output` and `describe_output` lists. 
+  and only the built-in policy exists (no user-defined policies), the data source will return empty `show_output` and `describe_output` lists.
   If you have user-defined authentication policies, they will continue to appear in the output as expected.
 - It can't be imported into the `snowflake_authentication_policy` resource.
 
