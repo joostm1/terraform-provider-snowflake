@@ -50,6 +50,8 @@ See the [service_user](https://registry.terraform.io/providers/snowflakedb/snowf
 
 No changes in configuration are required for existing service users. You can optionally add the `default_workload_identity` block to enable workload identity federation.
 
+References: [#3942](https://github.com/snowflakedb/terraform-provider-snowflake/issues/3942).
+
 ## v2.11.x ➞ v2.12.0
 
 ### *(new feature)* The new `strict_privilege_management` flag in the `snowflake_grant_privileges_to_account_role` resource
